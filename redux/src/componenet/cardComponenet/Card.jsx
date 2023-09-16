@@ -50,7 +50,8 @@ const Card = ({ price, id, name }) => {
           >
             add to card
           </button>
-        ) : (
+        ) : 
+        (
           <div>
             <button
               className="plus-btn"

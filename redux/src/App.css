@@ -1,4 +1,27 @@
 .App {
   text-align: center;
-display: flex;
+ 
+}
+.shopping-header{
+  box-shadow: .1rem .4rem 1rem .1rem rgba(218,218,218, .47);
+   display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.card-number{
+  border: .1rem solid red;
+  padding: 1rem;
+  border-radius: .5rem;
+  cursor:pointer;
+}
+.card-title{
+  font-size: 1.7rem;
+  color: rgb(247, 68, 68);
+  font-weight: bolder;
+}
+.cardCotnainer{display: flex;
+margin:0 auto;
+padding: 2rem;
 }
