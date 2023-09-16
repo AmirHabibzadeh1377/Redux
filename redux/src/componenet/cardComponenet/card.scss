@@ -1,13 +1,14 @@
 .card-container{
-    display:inline-block;
-    border:.1rem solid red;
-    padding: .2rem;
-    border-radius:.5rem;
+    display: flex;
+   
     margin-top: 2rem;
     .cardWraper{
-        width: 100%;
         display: flex;
+        border:.1rem solid red;
+        padding: .2rem;
+        border-radius:.5rem;
         flex-direction: column;
+        margin-right: .2rem;
         .card-image{
             width: 100%;
             margin:0 auto;
@@ -22,6 +23,20 @@
         }
         .add-to-card{
             cursor:pointer;
+        }
+        .plus-btn{
+            margin:.2rem;
+            cursor:pointer;
+            padding:.3rem;
+            background-color: rgb(4, 185, 125);
+            color: white;
+        }
+        .mines-btn{
+            margin:.2rem;
+            cursor:pointer;
+            padding:.3rem;
+            background-color: rgb(4, 185, 125);
+            color: white;
         }
     }
 }

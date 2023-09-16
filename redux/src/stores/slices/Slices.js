@@ -3,20 +3,34 @@ import { createSlice } from "@reduxjs/toolkit";
 const Slices = createSlice({
     name: "AddToCardSlice",
     initialState: {
-        value: 0
+       itemsList:[],
+       toatalQauntity:0,
+       showCart:false
     },
     reducers: {
-        increment: (state) => {
-            state.value += 1;
+        AddToCart: (state,actions) => {
+            const newItem = actions.payload;
+            const existItem = state.itemsList.find((item)=> item.id == newItem.id);
+            if(existItem){
+                existItem.quantity ++;
+                existItem.price += newItem.price;
+                
+            }
+            else{
+                state.itemsList.push({
+                    id:newItem.id,
+                    price:newItem.price,
+                    quantity :1
+                });
+                
+                state.toatalQauntity ++;
+            }
         },
-        decrement: (state) => {
-            state.value -= 1;
-        },
-        Add:(state,actions)=>{
-           state.value += actions.payload.payload
+        setShowCart(state){
+            state.showCart=true;
         }
     }
 })
 
-export const {increment , decrement,Add} = Slices.actions;
+export const {AddToCart , setShowCart} = Slices.actions;
 export default Slices.reducer;
