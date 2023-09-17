@@ -1,0 +1,17 @@
+.basket-container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(240, 238, 238, 0.807);
+    border-radius: .5rem;
+    width:16rem;
+    gap: .5rem;
+   
+}
+.un-visibility{
+   opacity:  0;
+   transition: .3s;
+}
+.visibility{
+    transition:.3s;
+    opacity: 1;
+}

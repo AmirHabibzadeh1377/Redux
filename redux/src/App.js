@@ -5,6 +5,7 @@ import Auth from './pages/Authentication/Auth';
 import { Product } from './componenet/data/data'
 import Card from './componenet/cardComponenet/Card';
 import {setShowCart} from './stores/slices/Slices'
+import Basket from './componenet/basket/Basket';
 function App() {
   const totalQauntity = useSelector((state) => state.AddToCard.toatalQauntity);
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -20,6 +21,9 @@ function App() {
           <div className='shopping-header'>
             <div className='card-number' onClick={showCartHandel}>
               cart items : {totalQauntity}
+              <div className='card-basket'>
+                <Basket showCart={showCart}/>
+              </div> 
             </div>
             <div className='card-title'>
               redux shopping cart 

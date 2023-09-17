@@ -8,9 +8,7 @@ import AddToCardStore from './stores/AddToCardStore';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={AddToCardStore}>
-    <React.StrictMode>
       <App />
-    </React.StrictMode>
   </Provider>
 );
 
