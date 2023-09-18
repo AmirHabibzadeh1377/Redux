@@ -14,6 +14,10 @@ const Slices = createSlice({
             if (existItem) {
                 existItem.quantity++;
                 existItem.price += newItem.price;
+                console.log(existItem.quantity)
+                if(existItem.quantity == 1){
+                    state.toatalQauntity++;
+                }
             }
             else {
                 state.itemsList.push({
@@ -30,8 +34,10 @@ const Slices = createSlice({
             const itemId = actions.payload.id;
             const existsItem = state.itemsList.find((item) => item.id == itemId);
             --existsItem.quantity;
-            if(existsItem.quantity == 0){
+            if (existsItem.quantity == 0) {
+             if(state.toatalQauntity > 0){
                 state.toatalQauntity--;
+             }
             }
         },
         setShowCart(state) {
